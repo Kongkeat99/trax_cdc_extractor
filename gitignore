@@ -1,0 +1,16 @@
+# secrets / runtime output
+gemini_key.txt
+backup/
+error_files/
+skipped_files.csv
+ocr_debug/
+*.xlsx
+*.pdf
+
+# build
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+.venv/
