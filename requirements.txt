@@ -3,3 +3,5 @@ pytesseract
 pillow
 numpy
 openpyxl
+tkinterdnd2
+google-genai

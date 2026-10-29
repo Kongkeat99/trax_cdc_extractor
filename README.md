@@ -12,6 +12,12 @@ Scanned shipment PDF (SAD + Commercial Invoice + Packing List + Info page) -> on
 - Command: `python extractor.py shipment.pdf --xlsx CDC_Export_Report_2026.xlsx`
   - `--dry-run` check only, `--extras` also fill E and J, `--force` allow duplicate INV.NO, `--out new.xlsx` don't touch original, `--debug` save OCR text to `ocr_debug/`
 
+### Cut PDF pages
+Reduces a full scanned bundle to the pages that matter: **customs declaration page 1 only** + **every page headed COMMERCIAL INVOICE** (one page per invoice). Receipt, port, container, packing-list and continuation pages are dropped. The original is never changed; the result is saved next to it as `<name>_trimmed.pdf`.
+- Window: **Cut PDF pages** button
+- Command: `python extractor.py shipment.pdf --trim-only` (a folder works too; `*_trimmed.pdf` files are skipped)
+- Note: packing list and info page are removed, so don't extract from the trimmed file if you need NW/GW from the packing list; extract from the original.
+
 Close the Excel file before writing. A backup copy goes to `backup/` each time.
 
 ## Red-mark -> Excel column

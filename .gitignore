@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+*.pdf
+*.xlsx
+error_files/
+backup/
+ocr_debug/
+skipped_files.csv
+skipped_results.csv
+gemini_key.txt

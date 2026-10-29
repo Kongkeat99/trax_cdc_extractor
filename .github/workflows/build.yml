@@ -27,8 +27,8 @@ jobs:
       - name: Build EXE
         run: >
           pyinstaller --noconsole --onefile --name TraxCDC
-          --collect-all fitz --collect-all pymupdf
-          --hidden-import extractor --hidden-import gemini_fallback
+          --collect-all fitz --collect-all pymupdf --collect-all tkinterdnd2
+          --hidden-import gemini_fallback
           gui.py
 
       - name: Package (EXE + README)
